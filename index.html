@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SkyScout</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,19 +12,49 @@
             <h1 id="heading">SkyScout</h1>
         </div>
         <div id="switcher">
-            <div id="recent-location"><p>Current Location</p></div>
-            <div id="search-location"><p>Search Location</p></div>
+            <button id="recent-location"><p>Current Location</p></button>
+            <button id="search-location"><p>Search Location</p></button>
         </div>
         <div id="search-bar">
-            <input  id="search-input" type="text" placeholder="Search City">
+            <input id="search-input" type="text" placeholder="Search City">
         </div>
         <div id="location">
-            <div id="city-name">~</div>
+            <div id="city-name">
+                <div id="temperature">
+                    <div id="tempnumber">
+                        <div id="tempvalue">75</div>
+                        <div id="tempunit">°C</div>
+                    </div>
+                    <div id="tempdetails">Cloudy</div>
+                    <div id="citytext">Bareilly</div>
+                </div>
+            </div>
         </div>
         <div id="three-features">
-            <div id="windspeed">~</div>
-            <div id="humidity">~</div>
-            <div id="clouds">~</div>
+            <div class="feature-box">
+                <img class="feature-icon" src="windspeed.png" alt="Windspeed">
+                <div class="feature-title">Windspeed</div>
+                <div class="feature-value">
+                    <div id="windspeed-value">2</div>
+                    <div class="feature-value-unit">m/s</div>
+                </div>
+            </div>
+            <div class="feature-box">
+                <img class="feature-icon" src="humidity.png" alt="Humidity">
+                <div class="feature-title">Humidity</div>
+                <div class="feature-value">
+                    <div id="humidity-value">56</div>
+                    <div class="feature-value-unit">%</div>
+                </div>
+            </div>
+            <div class="feature-box">
+                <img class="feature-icon" src="cloud.png" alt="Cloudy">
+                <div class="feature-title">Cloudy</div>
+                <div class="feature-value">
+                    <div id="cloudy-value">56</div>
+                    <div class="feature-value-unit">%</div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="weather.js"></script>

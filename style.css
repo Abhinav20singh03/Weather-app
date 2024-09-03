@@ -1,76 +1,171 @@
 @font-face {
     font-family: poppins;
     src: url(/Poppins-Regular.ttf);
-  }
-h1,p{
-    font-family: poppins;
 }
+
+h1, p {
+    font-family: poppins;
+    margin: 0;
+}
+
 body {
+    background-color: #e0f7fa;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-image: url("sky\ with\ cloud\ \ 5c07d17b-7848-41cd-b8d7-43c17c79783c.png");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow-x: hidden;
 }
-#wrapper,#search-bar,#location{
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin:20px;
-    padding:10px
-}
-#Title,#switcher{
-    width:100%;
-    margin:20px;
-    display: flex;
-    align-items:center ;
-    justify-content:space-around ;
-}
-#search-input{
-    width: 30%;
-}
-#three-features{
-    width:100%;
-    margin:20px;
-    display: flex;
-    align-items:center ;
-    justify-content:space-evenly ;
-}
-#windspeed,#humidity,#clouds,#city-name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width:150px;
-    min-height:90px;
-    background-color: #648cd7b0;
-    border-radius: 10px;
-}
-#recent-location,#search-location{
-    height: 40px; 
-    width:20%;
-    background-color: #89afe7;
-    box-shadow: rgba(0, 0, 0, 0.552)  4px 5px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
 
+#wrapper {
+    width: 90%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.426);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
+
+#Title {
+    margin-bottom: 20px;
+}
+
+#heading {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#switcher {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #2C69B6;
+    border: none;
     border-radius: 10px;
-    box-sizing: border-box;
-    background-color: #efdbea;
-    box-shadow: rgba(0, 0, 0, 0.552)  4px 5px 20px;
-  }
-  #recent-location:hover,#search-location:hover{
-    background-color: #476592;
     color: white;
-  }
-  
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b3f6b;
+    color: #ffffff;
+}
+
+#search-bar {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+#location {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#temperature {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #2C69B6;
+}
+
+#tempdetails, #citytext {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+#three-features {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-box {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin: 10px;
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    font-size: 1rem;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.feature-value {
+    display: flex;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* No changes for tablets, keeping the design the same */
+}
+
+@media (max-width: 480px) {
+    #heading {
+        font-size: 2rem;
+    }
+
+    #search-input {
+        width: 100%;
+    }
+
+    #temperature {
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #tempdetails, #citytext {
+        font-size: 1rem;
+    }
+
+    #switcher {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feature-box {
+        width: 90%; /* Full width for very small screens */
+        margin: 10px auto;
+    }
+}
+#tempnumber{
+    display: flex;
+}
