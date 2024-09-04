@@ -40,6 +40,7 @@ body {
 #heading {
     font-size: 2.5rem;
     color: #333;
+    
 }
 
 #switcher {
@@ -138,7 +139,7 @@ button:hover {
 
 @media (max-width: 480px) {
     #heading {
-        font-size: 2rem;
+        font-size: 25px;
     }
 
     #search-input {
@@ -146,7 +147,7 @@ button:hover {
     }
 
     #temperature {
-        font-size: 3rem;
+        font-size: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -154,17 +155,20 @@ button:hover {
     }
 
     #tempdetails, #citytext {
-        font-size: 1rem;
+        font-size: 13px;
     }
 
     #switcher {
         flex-direction: column;
-        gap: 10px;
+        gap: 7px;
     }
 
     .feature-box {
-        width: 90%; /* Full width for very small screens */
-        margin: 10px auto;
+        width: 80px; /* Full width for very small screens */
+        margin: 7px auto;
+    }
+    .feature-value{
+        font-size: 1rem;
     }
 }
 #tempnumber{
