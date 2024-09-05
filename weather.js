@@ -24,7 +24,7 @@ async function makerequest(city) {
       const data = await response.json();
       tempvalue.textContent = data.currentConditions.temp;
       tempdetail.textContent = data.currentConditions.conditions;
-      cityname.textContent = data.address;
+      cityname.textContent = data.resolvedAddress;
       windspeedvalue.textContent = data.currentConditions.windspeed;
       humidityvalue.textContent = data.currentConditions.humidity;
       cloudyvalue.textContent = data.currentConditions.cloudcover;
